@@ -1,4 +1,4 @@
-//Klasa book dziedziczy z klasy Product
+//Klasa book dziedziczy z klasy Product + dolicza znizke
 public class Book extends Product implements Discountable { 
 public book(String name, double price, int id){
     super(name, price, id);
@@ -8,4 +8,5 @@ public book(String name, double price, int id){
 public void applyDiscount(){
     price -= price * (percentage/100);  // obliczenie znizki
 }
+
 }
