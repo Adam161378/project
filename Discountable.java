@@ -1,3 +1,3 @@
-public interface Discountable{
-    void applyDiscout(double percentage); // metoda do zniżki
+public interface Discountable {
+    void applyDiscount(double percentage);
 }
