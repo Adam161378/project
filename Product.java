@@ -1,22 +1,23 @@
-// Bazowa klasa reprezentująca produkt w sklepie
-public class Product {
-    protected String name;   // Nazwa produktu
-    protected double price;  // Cena produktu
-    protected int id;        // ID produktu
+public class Product implements Discountable {
+    protected String name;
+    protected double price;
+    protected int id;
 
-    // Konstruktor do tworzenia produktu
     public Product(String name, double price, int id) {
         this.name = name;
         this.price = price;
         this.id = id;
     }
 
-    // Wyświetlanie informacji o produkcie
     public void display() {
-        System.out.println("ID: " + id + ", Name: " + name + ", Price: " + price + " PLN");
+        System.out.printf("ID: %d, Name: %s, Price: %.2f PLN\n", id, name, price);
     }
 
-    // Zwraca aktualną cenę produktu
+    @Override
+    public void applyDiscount(double percentage) {
+        price -= price * (percentage / 100);
+    }
+
     public double getPrice() {
         return price;
     }
