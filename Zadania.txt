@@ -1,0 +1,36 @@
+Zad1.
+Blok try- tu piszemy kod który może się wysypac
+ Zawiera kod który może prawdopodnie spowodować wyjątek.
+tu kod może się wysypac
+jeśli wystąpi wyjątek, wykonanie natychmiast przeskakuje do pasującego bloku catch(jeśli istnieje).
+Jeśli wyjątek nie wystapi , program przechodzi normalnie dalej, ewentualnie wykonując finally.
+ 
+blok catch- taki straznik
+sluzy do przechwycania i obsługi wyjatkow.
+można mieć kilka roznych catch-ów z roznymi wyjątkami.
+jeśli nie ma pasującego catch, wyjątek zostaje przekazany dalej.
+
+
+blok finally- zawsze jest wykonywany, nie ważne czy try się powiódł.
+jak jest wyjątek, finally się włączy.
+jak nie ma wyjątku, finally się wlaczy.
+
+zad2.
+dziedziczenie- to mechanizm, który pozwala klasie B przejąć pola z klasy A.
+Dlaczego dziedziczenie ulatwia rozwój kodu? : 
+nie powtarzasz kodu.
+Łatwo dodac nowe klasy.
+Łatwiej utrzymać kod(W klasie A robimy zmiany to reszta dziedziczy te zmiany).
+Polimorfizm.
+
+zad3.
+Array - Jest to podstawowa, statyczna struktura danych w Javie, która przechowuje z góry określoną liczbę elementów tego samego typu, ustawia się na początku rozmiar stały którego sie nie zwiekszy.
+ArrayList - Jest to klasa z biblioteki Javy, która reprezentuje dynamiczną listę obiektów.
+jest elastyczna czyli można dodawać i usuwac podczas działania.
+
+| Sytuacja                                                            | Co wybrać?    |
+| ------------------------------------------------------------------- | ------------- |
+| Znasz   liczbę elementów   z góry i nie zmieni się                  |     Array     |
+| Potrzebujesz   dynamicznego dodawania/usuwania   elementów          |   ArrayList   |
+| Liczy się   maksymalna szybkość dostępu po indeksie                 |    Array      |
+| Chcesz korzystać z   wbudowanych metod typu add, remove, contains   |   ArrayList   |
