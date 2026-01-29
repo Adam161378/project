@@ -1,0 +1,51 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class SortowanieTablicy {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        int[] tablica = new int[10];
+
+        System.out.print("Podaj dolną granicę przedziału: ");
+        int dolnaGranica = scanner.nextInt();
+
+        System.out.print("Podaj górną granicę przedziału: ");
+        int gornaGranica = scanner.nextInt();
+
+        // Wypełnianie tablicy losowymi liczbami z podanego przedziału
+        for (int i = 0; i < tablica.length; i++) {
+            tablica[i] = random.nextInt(gornaGranica - dolnaGranica + 1) + dolnaGranica;
+        }
+
+        System.out.println("\nZawartość tablicy przed sortowaniem:");
+        wyswietlTablice(tablica);
+
+        // Sortowanie rosnące (bubble sort)
+        for (int i = 0; i < tablica.length - 1; i++) {
+            for (int j = 0; j < tablica.length - 1 - i; j++) {
+                if (tablica[j] > tablica[j + 1]) {
+                    int temp = tablica[j];
+                    tablica[j] = tablica[j + 1];
+                    tablica[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("\nZawartość tablicy po sortowaniu rosnącym:");
+        wyswietlTablice(tablica);
+
+        scanner.close();
+    }
+
+    // Metoda do wyświetlania tablicy
+    public static void wyswietlTablice(int[] tablica) {
+        for (int i = 0; i < tablica.length; i++) {
+            System.out.print(tablica[i] + " ");
+        }
+        System.out.println();
+    }
+}
